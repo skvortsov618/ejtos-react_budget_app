@@ -1,7 +1,7 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { AppProvider } from './context/AppContext';
+import Currency from './components/Currency';
 import Budget from './components/Budget';
 import ExpenseTotal from './components/ExpenseTotal';
 import ExpenseList from './components/ExpenseList';
@@ -12,8 +12,11 @@ const App = () => {
     return (
         <AppProvider>
             <div className='container'>
-                <h1 className='mt-3'>Company's Budget Allocation</h1>
-                <div className='row mt-3'>
+                <h1 className='mt-4'>Company's Budget Allocation</h1>
+                <div className='row mt-4'>
+                    <div className='col-sm'>
+                        <Currency />
+                    </div>
                     <div className='col-sm'>
                         <Budget />
                     </div>
